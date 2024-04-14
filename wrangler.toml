@@ -1,4 +1,5 @@
 name = "memo"
+pages_build_output_dir = ".svelte-kit/cloudflare"
 
 [[d1_databases]]
 binding = "DB"
