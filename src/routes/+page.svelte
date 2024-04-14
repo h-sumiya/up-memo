@@ -2,6 +2,10 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>UPメモ</title>
+</svelte:head>
+
 <div class="items">
 	<ul>
 		{#each data.results as item}

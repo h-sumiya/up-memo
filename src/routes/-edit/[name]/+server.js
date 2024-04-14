@@ -18,6 +18,10 @@ export async function POST({ params, platform, request }) {
         return new Response(null, { status: 401 });
     }
 
+    if (!params.name) {
+        return new Response(null, { status: 400 });
+    }
+
     let body = await request.json();
     let time = new Date().getTime() / 1000;
     time = Math.floor(time);

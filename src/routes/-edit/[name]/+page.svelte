@@ -36,8 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Edit {data.name}</title>
 </svelte:head>
 
 <div class="container">

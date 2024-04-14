@@ -18,7 +18,12 @@
         }
     }
 
-    console.log(data);
+    async function newPage(name) {
+        if (!name) {
+            return;
+        }
+        location.href = `/-edit/${name}`;
+    }
 
     let name = "";
 </script>
@@ -29,8 +34,10 @@
 
 <div class="ma"></div>
 <span class="name">APIKEY</span><input type="text" bind:value={$apiKey} />
-<br>
-<span class="name">New</span><input type="text" bind:value={name} /><button on:click={() => location.href = `/-edit/${name}`}>Create</button>
+<br />
+<span class="name">New</span><input type="text" bind:value={name} /><button
+    on:click={() => newPage(name)}>Create</button
+>
 
 <div class="items">
     <ul>
@@ -51,7 +58,7 @@
     }
 
     span.name {
-       margin: 0 40px 0 40px;
+        margin: 0 40px 0 40px;
     }
 
     button {
